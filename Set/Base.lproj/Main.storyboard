@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Set" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kbe-nY-tGr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dag-OP-3dn">
+                                <rect key="frame" x="16" y="50" width="343" height="653"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="for-Ma-nLi">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="102.33333333333333"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQV-JX-p4s" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9e-J3-IXp"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg4-Vy-cXE" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SOp-Nn-Wex"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32x-vD-RGs" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="c40-5l-QiA"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tG4-YH-tYW"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBq-09-A54" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="LqT-eg-l73"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Dw-pZ-v5f"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b6x-iX-sil">
+                                        <rect key="frame" x="0.0" y="110.33333333333334" width="343" height="102"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HK-Ti-btc" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="779-g8-g6I"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ecb-pL-aUF"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNi-3n-5M0" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="d0I-wa-uP4"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gsg-y7-sfR"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1S-xW-TpM" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="PMf-wb-xAb"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o0F-3X-oIC"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvQ-5N-5oK" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="NOJ-Yo-mPQ"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b04-eH-h73"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YtO-d6-6Hz">
+                                        <rect key="frame" x="0.0" y="220.33333333333334" width="343" height="102.33333333333334"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbv-sv-BdI" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="WHB-32-Wpk"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFB-L9-dyH"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhL-P0-qcd" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="VQ6-B8-mCz"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4N-el-hnE"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mT0-1Z-2o0" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="ezp-nv-uKe"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSM-J5-3ju"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5g-ot-nGb" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="7O2-eN-C2J"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SnR-VC-j8Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ov7-4g-Kwj">
+                                        <rect key="frame" x="0.0" y="330.66666666666669" width="343" height="102"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggi-fW-IhJ" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="Obm-4J-1Fp"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IDK-eG-sR7"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0i-Dy-cem" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="9YO-EW-x6O"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOM-As-4My"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA0-P8-thd" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="2aS-Pl-eXy"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="InW-0f-K7m"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgr-9C-DPV" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="sfS-Og-blO"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yfm-RM-409"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Ok-6z-gE3">
+                                        <rect key="frame" x="0.0" y="440.66666666666669" width="343" height="102.33333333333331"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAO-vD-zaa" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="8Ep-7w-WPc"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bsA-LE-gzD"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-8n-ZB7" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="T7s-Yb-hx7"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfY-ET-ovr"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxm-va-Hmt" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="jA2-fN-f6w"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBS-Wl-YGj"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hre-ag-VR5" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="NM2-pf-YdU"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbQ-Uy-P9U"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BZj-GO-nSH">
+                                        <rect key="frame" x="0.0" y="551" width="343" height="102"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzI-KE-4jA" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="HkJ-xV-UeX"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKw-IZ-lJx"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZE-CZ-sX7" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="4yZ-bU-NbW"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgq-b7-tXH"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRX-KK-77q" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="7kh-rk-qa1"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpM-s2-auU"/>
+                                                </connections>
+                                            </button>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-Ai-hmi" customClass="SetCardButton" customModule="Set" customModuleProvider="target">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="102"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="irV-hb-706" eventType="touchUpInside" id="idV-IM-qks"/>
+                                                    <action selector="touchSetCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="38W-mT-jY4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS5-wR-Vbm">
+                                <rect key="frame" x="278" y="711" width="81" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+3">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchAddThreeMoreCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0K-iz-7Fh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9G9-Qx-mut">
+                                <rect key="frame" x="103" y="711" width="167" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dad-T6-a8F">
+                                <rect key="frame" x="16" y="711" width="79" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="restart">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchRestart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOi-Je-jpt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bwc-iA-T4b"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bwc-iA-T4b" firstAttribute="bottom" secondItem="dag-OP-3dn" secondAttribute="bottom" constant="75" id="Ibm-ZG-A5g"/>
+                            <constraint firstItem="dag-OP-3dn" firstAttribute="top" secondItem="bwc-iA-T4b" secondAttribute="top" id="SZQ-PJ-01X"/>
+                            <constraint firstItem="bwc-iA-T4b" firstAttribute="trailing" secondItem="dag-OP-3dn" secondAttribute="trailing" constant="16" id="h1k-ub-Jgb"/>
+                            <constraint firstItem="dag-OP-3dn" firstAttribute="leading" secondItem="bwc-iA-T4b" secondAttribute="leading" constant="16" id="kLN-h1-HW5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameScoreLabel" destination="9G9-Qx-mut" id="jHD-Mk-CMn"/>
+                        <outlet property="restartButton" destination="dad-T6-a8F" id="6Rn-JU-veR"/>
+                        <outletCollection property="cardButtons" destination="vQV-JX-p4s" collectionClass="NSMutableArray" id="AFZ-ne-mL6"/>
+                        <outletCollection property="cardButtons" destination="Wg4-Vy-cXE" collectionClass="NSMutableArray" id="maM-ik-7aZ"/>
+                        <outletCollection property="cardButtons" destination="32x-vD-RGs" collectionClass="NSMutableArray" id="TAO-cF-xvF"/>
+                        <outletCollection property="cardButtons" destination="yBq-09-A54" collectionClass="NSMutableArray" id="iCo-Jt-K8D"/>
+                        <outletCollection property="cardButtons" destination="8HK-Ti-btc" collectionClass="NSMutableArray" id="Mkx-tD-3aQ"/>
+                        <outletCollection property="cardButtons" destination="aNi-3n-5M0" collectionClass="NSMutableArray" id="hqF-h0-h23"/>
+                        <outletCollection property="cardButtons" destination="l1S-xW-TpM" collectionClass="NSMutableArray" id="5rp-OY-lNm"/>
+                        <outletCollection property="cardButtons" destination="KvQ-5N-5oK" collectionClass="NSMutableArray" id="3xr-lf-QEs"/>
+                        <outletCollection property="cardButtons" destination="h5g-ot-nGb" collectionClass="NSMutableArray" id="2Ym-jW-DQ7"/>
+                        <outletCollection property="cardButtons" destination="mT0-1Z-2o0" collectionClass="NSMutableArray" id="LCb-7t-4bw"/>
+                        <outletCollection property="cardButtons" destination="IhL-P0-qcd" collectionClass="NSMutableArray" id="7qP-rJ-Gr1"/>
+                        <outletCollection property="cardButtons" destination="Lbv-sv-BdI" collectionClass="NSMutableArray" id="0a0-z0-0Yy"/>
+                        <outletCollection property="cardButtons" destination="ggi-fW-IhJ" collectionClass="NSMutableArray" id="0ie-4Z-PRd"/>
+                        <outletCollection property="cardButtons" destination="J0i-Dy-cem" collectionClass="NSMutableArray" id="xVk-ao-zxs"/>
+                        <outletCollection property="cardButtons" destination="xA0-P8-thd" collectionClass="NSMutableArray" id="zLX-Eg-flD"/>
+                        <outletCollection property="cardButtons" destination="vgr-9C-DPV" collectionClass="NSMutableArray" id="AiF-zx-bgQ"/>
+                        <outletCollection property="cardButtons" destination="Hre-ag-VR5" collectionClass="NSMutableArray" id="cau-au-m1T"/>
+                        <outletCollection property="cardButtons" destination="oxm-va-Hmt" collectionClass="NSMutableArray" id="GrP-If-d5H"/>
+                        <outletCollection property="cardButtons" destination="Mcx-8n-ZB7" collectionClass="NSMutableArray" id="afX-CX-xan"/>
+                        <outletCollection property="cardButtons" destination="aAO-vD-zaa" collectionClass="NSMutableArray" id="Jzk-Fr-DER"/>
+                        <outletCollection property="cardButtons" destination="PzI-KE-4jA" collectionClass="NSMutableArray" id="Lb2-zq-mM0"/>
+                        <outletCollection property="cardButtons" destination="XZE-CZ-sX7" collectionClass="NSMutableArray" id="nac-Mh-5qS"/>
+                        <outletCollection property="cardButtons" destination="ZRX-KK-77q" collectionClass="NSMutableArray" id="p58-MS-WoJ"/>
+                        <outletCollection property="cardButtons" destination="rYN-Ai-hmi" collectionClass="NSMutableArray" id="RQx-5S-6Vo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="irV-hb-706" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="-64.285714285714292"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
