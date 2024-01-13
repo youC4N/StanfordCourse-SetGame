@@ -13,10 +13,11 @@
 		851F47AA2A72A7B60040E0FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851F47A82A72A7B60040E0FC /* Main.storyboard */; };
 		851F47AC2A72A7B90040E0FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851F47AB2A72A7B90040E0FC /* Assets.xcassets */; };
 		851F47AF2A72A7B90040E0FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851F47AD2A72A7B90040E0FC /* LaunchScreen.storyboard */; };
-		851F47B92A72B0250040E0FC /* SetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F47B82A72B0250040E0FC /* SetCardView.swift */; };
+		853C2FCD2AB0746E00CF41D0 /* GameFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C2FCC2AB0746E00CF41D0 /* GameFieldView.swift */; };
 		8564B7A42A7C125100B2E646 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564B7A32A7C125100B2E646 /* Set.swift */; };
 		8564B7A62A7C129800B2E646 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564B7A52A7C129800B2E646 /* Card.swift */; };
 		8564B7A82A7D79F700B2E646 /* SetCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564B7A72A7D79F600B2E646 /* SetCardButton.swift */; };
+		85BF43992B53409600CF8982 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF43982B53409600CF8982 /* Squiggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,11 @@
 		851F47AB2A72A7B90040E0FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		851F47AE2A72A7B90040E0FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		851F47B02A72A7B90040E0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		851F47B82A72B0250040E0FC /* SetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardView.swift; sourceTree = "<group>"; };
+		853C2FCC2AB0746E00CF41D0 /* GameFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFieldView.swift; sourceTree = "<group>"; };
 		8564B7A32A7C125100B2E646 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		8564B7A52A7C129800B2E646 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8564B7A72A7D79F600B2E646 /* SetCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardButton.swift; sourceTree = "<group>"; };
+		85BF43982B53409600CF8982 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +66,11 @@
 		851F47A12A72A7B60040E0FC /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				853C2FCC2AB0746E00CF41D0 /* GameFieldView.swift */,
 				8564B7A32A7C125100B2E646 /* Set.swift */,
+				85BF43982B53409600CF8982 /* Squiggle.swift */,
 				8564B7A52A7C129800B2E646 /* Card.swift */,
 				8564B7A72A7D79F600B2E646 /* SetCardButton.swift */,
-				851F47B82A72B0250040E0FC /* SetCardView.swift */,
 				851F47A62A72A7B60040E0FC /* ViewController.swift */,
 				851F47A22A72A7B60040E0FC /* AppDelegate.swift */,
 				851F47A42A72A7B60040E0FC /* SceneDelegate.swift */,
@@ -152,8 +155,9 @@
 			files = (
 				8564B7A82A7D79F700B2E646 /* SetCardButton.swift in Sources */,
 				851F47A72A72A7B60040E0FC /* ViewController.swift in Sources */,
-				851F47B92A72B0250040E0FC /* SetCardView.swift in Sources */,
+				85BF43992B53409600CF8982 /* Squiggle.swift in Sources */,
 				8564B7A62A7C129800B2E646 /* Card.swift in Sources */,
+				853C2FCD2AB0746E00CF41D0 /* GameFieldView.swift in Sources */,
 				8564B7A42A7C125100B2E646 /* Set.swift in Sources */,
 				851F47A32A72A7B60040E0FC /* AppDelegate.swift in Sources */,
 				851F47A52A72A7B60040E0FC /* SceneDelegate.swift in Sources */,

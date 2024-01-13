@@ -11,16 +11,15 @@ struct SetGame {
     var hand: [Card]
     var deckOfCards: [Card]
     var matches = 0
-    private var selection = Selection.empty
+    private(set) var selection = Selection.empty
 
     static let STARTING_HAND = 12
-    static let MAX_HAND = 24
+    static let MAX_HAND = 81
 
     init() {
         let cards = Card.all.shuffled()
         hand = Array(cards[..<Self.STARTING_HAND])
         deckOfCards = Array(cards[Self.STARTING_HAND...])
-        print(deckOfCards.count)
     }
 
     mutating func addThreeMoreCards() {
@@ -39,16 +38,23 @@ struct SetGame {
         hand.append(third)
 
     }
+    
+    mutating func choose(card: Card){
+        selection = selection.toggle(card: card)
+    }
 
     mutating func chooseCard(at index: Int) {
         guard let card = hand[safe: index] else { return }
         selection = selection.toggle(card: card)
     }
+    
     func isSelected(at index: Int) -> Bool {
         guard let card = hand[safe: index] else { return false }
         return selection.isSelected(card: card)
     }
+    
     func card(at index: Int) -> Card? { hand[safe: index] }
+    
     func satisfiesSet<T: Equatable>(
         given cards: (Card, Card, Card),
         withProperty property: KeyPath<Card, T>
@@ -72,7 +78,10 @@ struct SetGame {
 
         self.selection = .empty
 
-        guard isSet(given: (card1, card2, card3)) else { self.matches -= 3; return }
+        guard isSet(given: (card1, card2, card3)) else {
+            self.matches -= 3
+            return
+        }
 
         let changedIndicies = (
             hand.firstIndex(of: card1)!,
@@ -85,7 +94,6 @@ struct SetGame {
                 deckOfCards.popLast(), deckOfCards.popLast(), deckOfCards.popLast()
             )
         else {
-            //hand.remove(at: changedIndicies.0)
             let removingElements: [Card] = [
                 hand[changedIndicies.0], hand[changedIndicies.1], hand[changedIndicies.2],
             ]
@@ -97,7 +105,7 @@ struct SetGame {
         hand[changedIndicies.0] = first
         hand[changedIndicies.1] = second
         hand[changedIndicies.2] = third
-        
+
         self.matches += 1
 
         // TODO: self.matches += 1
@@ -162,9 +170,7 @@ enum Selection: Equatable {
             return .three(first, second, card)
         case .three(_, _, _):
             return .one(card)
-
         }
-
     }
 
     func isSelected(card: Card) -> Bool {
@@ -178,58 +184,9 @@ enum Selection: Equatable {
             return first == card || second == card
         case .three(let first, let second, let third):
             return first == card || second == card || third == card
-
         }
     }
-
 }
-
-//switch self {
-//// Remove if present
-//case .one(card): return .empty
-//case .two(card, let first): fallthrough
-//case .two(let first, card): return .one(first)
-//case .three(card, let first, let second): fallthrough
-//case .three(let first, card, let second): fallthrough
-//case .three(let first, let second, card): return .two(first, second)
-//
-//// Add if absent
-//case .empty: return .one(card)
-//case .two(let first, let second): return .three(first, second, card)
-//case .one(let first): return .two(first, card)
-//// There cannot be more than three cards
-//case .three(_, _, _): return .empty
-//}
-
-//    switch self {
-//    case .one(card): return .empty
-//    case .two(card, let first): fallthrough
-//    case .two(let first, card): return .one(first)
-//    case .three(card, let first, let second): fallthrough
-//    case .three(let first, card, let second): fallthrough
-//    case .three(let first, let second, card): return .two(first, second)
-//    default: return self
-//    }
-
-//        let a: Optional<Int> = Optional.none
-//        let b: Optional<Int> = Optional.some(42)
-//
-//        let c: Int? = nil
-//        let d: Int? = 42
-
-//        let x: Selection = .one()
-//        switch x {
-//
-//        case .empty:
-//
-//        case .one(var card):
-//
-//            card.color = .green
-//        case .two(_, _):
-//
-//        case .three(_, _, _):
-//
-//        }
 
 extension Array {
     subscript(safe index: Int) -> Element? {

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol PluralStringConvertible: CustomStringConvertible {
     var pluralOther: String { get }
     var pluralOne: String { get }
@@ -31,7 +30,6 @@ extension PluralStringConvertible {
     
 }
 
-
 struct Card: Equatable, CustomStringConvertible {
     var figure: Figure
     var count: Count
@@ -39,7 +37,6 @@ struct Card: Equatable, CustomStringConvertible {
     var pattern: Pattern
     
     var description: String {
-        
         "\(count)\n\(color)\n\(pattern)\n\(figure.description(for: count.asInt))"
     }
      
@@ -53,28 +50,28 @@ struct Card: Equatable, CustomStringConvertible {
     }
     
     enum Figure: CaseIterable, CustomStringConvertible, PluralStringConvertible {
-        case triangle
-        case square
-        case circle
+        case diamond
+        case squiggle
+        case oval
         
         var description: String {
             switch self {
-            case .triangle:
-                return "triangle"
-            case .square:
-                return "square"
-            case .circle:
-                return "circle"
+            case .diamond:
+                return "diamond"
+            case .squiggle:
+                return "squiggle"
+            case .oval:
+                return "oval"
             }
             
         }
         var pluralOther: String {
             switch self{
-            case .triangle:
+            case .diamond:
                 return "triangles"
-            case .square:
+            case .squiggle:
                 return "squares"
-            case .circle:
+            case .oval:
                 return "circles"
             }
         }
@@ -107,7 +104,6 @@ struct Card: Equatable, CustomStringConvertible {
                 }
             }
         }
-        print(items.count)
         return items
     }
 }
