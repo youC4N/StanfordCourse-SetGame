@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func shuffleOnRotation(_ sender: UIRotationGestureRecognizer) {
+        switch sender.state {
+        case .ended:
+            game.shuffleHand()
+            updateViewFromModel()
+        default:
+            break
+        }
+        
+    }
     @IBOutlet weak var gameField: GameFieldView!
     
     var game = SetGame()
@@ -34,10 +44,6 @@ class ViewController: UIViewController {
         updateViewFromModel()
     }
     
-    func touchTouch(_ sender: AnyObject) {
-        print(sender)
-    }
-
     func updateViewFromModel() {
         if game.matches >= 0 {
             gameScoreLabel.text = String(format: "%03d", game.matches)
@@ -47,10 +53,17 @@ class ViewController: UIViewController {
         gameField.selection = game.selection
         gameField.cards = game.hand
     }
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         restartButton.backgroundColor = .white
+        updateViewFromModel()
+    }
+    
+    @IBAction func handleSwipeUp(_ sender: UISwipeGestureRecognizer) {
+        self.game.addThreeMoreCards()
         updateViewFromModel()
     }
 }

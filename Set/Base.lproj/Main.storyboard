@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Set" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kbe-nY-tGr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e48-Uv-YtW" userLabel="Card View" customClass="GameFieldView" customModule="Set" customModuleProvider="target">
-                                <rect key="frame" x="16" y="50" width="343" height="650"/>
+                                <rect key="frame" x="16" y="20" width="343" height="569"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cardCount">
@@ -27,7 +27,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBS-Rg-Kq8" userLabel="Bottom Bar">
-                                <rect key="frame" x="16" y="716" width="343" height="62"/>
+                                <rect key="frame" x="16" y="605" width="343" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dad-T6-a8F">
                                         <rect key="frame" x="0.0" y="0.0" width="98" height="62"/>
@@ -79,6 +79,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bwc-iA-T4b"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CBS-Rg-Kq8" firstAttribute="top" secondItem="e48-Uv-YtW" secondAttribute="bottom" constant="16" id="2rg-pS-FF4"/>
                             <constraint firstItem="e48-Uv-YtW" firstAttribute="top" secondItem="bwc-iA-T4b" secondAttribute="top" id="5SK-bb-sok"/>
@@ -88,6 +89,10 @@
                             <constraint firstItem="e48-Uv-YtW" firstAttribute="leading" secondItem="bwc-iA-T4b" secondAttribute="leading" constant="16" id="nHt-3T-n0b"/>
                             <constraint firstItem="bwc-iA-T4b" firstAttribute="trailing" secondItem="e48-Uv-YtW" secondAttribute="trailing" constant="16" id="tvJ-Sd-Zju"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lgI-DP-OgO" appends="YES" id="Bvp-FD-VSf"/>
+                            <outletCollection property="gestureRecognizers" destination="9Wj-oV-6ga" appends="YES" id="ME3-il-Rg0"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="gameField" destination="e48-Uv-YtW" id="Tix-RE-NwS"/>
@@ -96,8 +101,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="lgI-DP-OgO">
+                    <connections>
+                        <action selector="handleSwipeUp:" destination="BYZ-38-t0r" id="vKq-zX-7ju"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <rotationGestureRecognizer id="9Wj-oV-6ga">
+                    <connections>
+                        <action selector="shuffleOnRotation:" destination="BYZ-38-t0r" id="azo-DB-ETd"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-5068" y="-241"/>
+            <point key="canvasLocation" x="-5620" y="-295"/>
         </scene>
     </scenes>
     <resources>

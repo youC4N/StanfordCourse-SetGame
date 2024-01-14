@@ -8,11 +8,11 @@
 import Foundation
 
 struct SetGame {
-    var hand: [Card]
-    var deckOfCards: [Card]
-    var matches = 0
+    private(set) var hand: [Card]
+    private(set) var deckOfCards: [Card]
+    private(set) var matches = 0
     private(set) var selection = Selection.empty
-
+    
     static let STARTING_HAND = 12
     static let MAX_HAND = 81
 
@@ -20,6 +20,11 @@ struct SetGame {
         let cards = Card.all.shuffled()
         hand = Array(cards[..<Self.STARTING_HAND])
         deckOfCards = Array(cards[Self.STARTING_HAND...])
+    }
+    
+    mutating func shuffleHand(){
+        hand.shuffle()
+        selection = Selection.empty
     }
 
     mutating func addThreeMoreCards() {
@@ -36,7 +41,6 @@ struct SetGame {
         hand.append(first)
         hand.append(second)
         hand.append(third)
-
     }
     
     mutating func choose(card: Card){
@@ -91,11 +95,15 @@ struct SetGame {
 
         guard
             case let (first?, second?, third?) = (
-                deckOfCards.popLast(), deckOfCards.popLast(), deckOfCards.popLast()
+                deckOfCards.popLast(), 
+                deckOfCards.popLast(),
+                deckOfCards.popLast()
             )
         else {
             let removingElements: [Card] = [
-                hand[changedIndicies.0], hand[changedIndicies.1], hand[changedIndicies.2],
+                hand[changedIndicies.0], 
+                hand[changedIndicies.1],
+                hand[changedIndicies.2],
             ]
 
             hand.removeAll(where: { removingElements.contains($0) })
