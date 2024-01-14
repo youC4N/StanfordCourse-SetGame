@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Set" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kbe-nY-tGr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e48-Uv-YtW" userLabel="Card View" customClass="GameFieldView" customModule="Set" customModuleProvider="target">
-                                <rect key="frame" x="16" y="20" width="343" height="569"/>
+                                <rect key="frame" x="59" y="0.0" width="734" height="294"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cardCount">
@@ -27,10 +27,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBS-Rg-Kq8" userLabel="Bottom Bar">
-                                <rect key="frame" x="16" y="605" width="343" height="62"/>
+                                <rect key="frame" x="59" y="310" width="734" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dad-T6-a8F">
-                                        <rect key="frame" x="0.0" y="0.0" width="98" height="62"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="215.33333333333334" height="62"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
@@ -42,14 +42,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9G9-Qx-mut">
-                                        <rect key="frame" x="106" y="7" width="131" height="48"/>
+                                        <rect key="frame" x="223.33333333333334" y="7" width="287.33333333333326" height="48"/>
                                         <color key="tintColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS5-wR-Vbm">
-                                        <rect key="frame" x="245" y="0.0" width="98" height="62"/>
+                                        <rect key="frame" x="518.66666666666663" y="0.0" width="215.33333333333337" height="62"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
@@ -83,11 +83,11 @@
                         <constraints>
                             <constraint firstItem="CBS-Rg-Kq8" firstAttribute="top" secondItem="e48-Uv-YtW" secondAttribute="bottom" constant="16" id="2rg-pS-FF4"/>
                             <constraint firstItem="e48-Uv-YtW" firstAttribute="top" secondItem="bwc-iA-T4b" secondAttribute="top" id="5SK-bb-sok"/>
-                            <constraint firstItem="CBS-Rg-Kq8" firstAttribute="leading" secondItem="bwc-iA-T4b" secondAttribute="leading" constant="16" id="ORp-g7-7pu"/>
-                            <constraint firstItem="bwc-iA-T4b" firstAttribute="trailing" secondItem="CBS-Rg-Kq8" secondAttribute="trailing" constant="16" id="VDk-RY-MhW"/>
+                            <constraint firstItem="CBS-Rg-Kq8" firstAttribute="leading" secondItem="bwc-iA-T4b" secondAttribute="leading" id="ORp-g7-7pu"/>
+                            <constraint firstItem="bwc-iA-T4b" firstAttribute="trailing" secondItem="CBS-Rg-Kq8" secondAttribute="trailing" id="VDk-RY-MhW"/>
                             <constraint firstItem="bwc-iA-T4b" firstAttribute="bottom" secondItem="CBS-Rg-Kq8" secondAttribute="bottom" id="Zxe-yx-6dc"/>
-                            <constraint firstItem="e48-Uv-YtW" firstAttribute="leading" secondItem="bwc-iA-T4b" secondAttribute="leading" constant="16" id="nHt-3T-n0b"/>
-                            <constraint firstItem="bwc-iA-T4b" firstAttribute="trailing" secondItem="e48-Uv-YtW" secondAttribute="trailing" constant="16" id="tvJ-Sd-Zju"/>
+                            <constraint firstItem="e48-Uv-YtW" firstAttribute="leading" secondItem="bwc-iA-T4b" secondAttribute="leading" id="nHt-3T-n0b"/>
+                            <constraint firstItem="bwc-iA-T4b" firstAttribute="trailing" secondItem="e48-Uv-YtW" secondAttribute="trailing" id="tvJ-Sd-Zju"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="lgI-DP-OgO" appends="YES" id="Bvp-FD-VSf"/>

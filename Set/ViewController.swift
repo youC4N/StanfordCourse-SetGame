@@ -60,6 +60,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         restartButton.backgroundColor = .white
         updateViewFromModel()
+        adjustInsets()
+    }
+    
+    func adjustInsets() {
+        var additionalInsets = UIEdgeInsets.zero
+        let sides = [\UIEdgeInsets.left, \.right, \.top, \.bottom]
+        for side in sides where view.safeAreaInsets[keyPath: side] == 0 {
+            additionalInsets[keyPath: side] = 8
+        }
+        additionalSafeAreaInsets = additionalInsets
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        self.adjustInsets()
     }
     
     @IBAction func handleSwipeUp(_ sender: UISwipeGestureRecognizer) {
